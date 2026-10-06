@@ -8,7 +8,12 @@ public class MonthlyPower {
     public static void print_PowerUsage(double[][] usage) {
 
         // TODO
+       /* for (int i = 0; i < usage.length; i++) {
+            double[] day_usage = usage[i];
 
+            DailyPower.
+        }
+*/
     }
 
     // b) print power prices for a month
