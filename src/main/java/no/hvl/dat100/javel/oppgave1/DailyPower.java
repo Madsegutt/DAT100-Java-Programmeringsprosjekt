@@ -23,7 +23,7 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
+
         for (double u: usage) {
             sum += u;
         }
@@ -35,8 +35,12 @@ public class DailyPower {
     public static double computeSpotPrice(double[] usage, double[] prices) {
 
         double price = 0;
-
-        // TODO
+        for (int i = 0; i < usage.length; i++){
+            for(int j = 0; j < prices.length; j++){
+                price += (usage[i] + prices[j]);
+            }
+        }
+        //fikser seinare//
 
         return price;
     }
@@ -48,8 +52,9 @@ public class DailyPower {
     private static double getSupport(double usage, double price) {
 
         double support = 0;
-
-        // TODO
+        if (price > THRESHOLD){
+            support = PERCENTAGE * (price * usage);
+        }
 
         return support;
     }

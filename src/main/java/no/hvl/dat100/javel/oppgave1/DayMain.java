@@ -2,6 +2,8 @@ package no.hvl.dat100.javel.oppgave1;
 
 import no.hvl.dat100.javel.oppgave2.MonthlyPower;
 
+import static no.hvl.dat100.javel.oppgave1.DailyPower.printPowerPrices;
+
 public class DayMain {
 
     public static void main(String[] args) {
@@ -24,7 +26,6 @@ public class DayMain {
          Remember to also to check that you get the expected results
          */
 
-        DailyPower.printPowerPrices(DayPowerData.powerprices_day);
 
         System.out.println();
 
@@ -33,5 +34,13 @@ public class DayMain {
         System.out.println();
 
         DailyPower.computePowerUsage(DayPowerData.powerusage_day);
+
+        System.out.println();
+
+        System.out.println(DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
+
+        System.out.println();
+
+        System.out.println(DailyPower.getSupport(powerusage_day, powerprices_day));
     }
 }
