@@ -41,6 +41,15 @@ public class DayMain {
 
         System.out.println();
 
-        System.out.println(DailyPower.getSupport(powerusage_day, powerprices_day));
+        for (int i = 0;i < (DayPowerData.powerusage_day).length; i++){
+            double usage = DayPowerData.powerusage_day[i];
+            double price = DayPowerData.powerprices_day[i];
+
+            double support = DailyPower.getPowerSupport(usage, price);
+            if (support > 0) {
+                System.out.println("Straumstøtte: " + support);
+            }
+        }
+
     }
 }
