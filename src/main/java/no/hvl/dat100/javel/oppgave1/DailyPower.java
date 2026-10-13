@@ -1,4 +1,6 @@
 package no.hvl.dat100.javel.oppgave1;
+import static no.hvl.dat100.javel.oppgave1.DailyPower.printPowerPrices;
+import static no.hvl.dat100.javel.oppgave1.DayPowerData.powerusage_day;
 
 public class DailyPower {
 
@@ -53,11 +55,16 @@ public class DailyPower {
 
         double support = 0;
         if (price > THRESHOLD){
-            support = PERCENTAGE * (price * usage);
+            support = PERCENTAGE * (price - THRESHOLD) * usage;
         }
 
         return support;
     }
+    public static double getPowerSupport(double usage, double price) {
+        return getSupport(usage, price);
+    }
+
+
 
     // f) compute power support for a single day
     public static double computePowerSupport(double[] usage, double[] prices) {
