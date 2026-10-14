@@ -38,14 +38,11 @@ public class DailyPower {
 
         double price = 0;
         for (int i = 0; i < usage.length; i++){
-            for(int j = 0; j < prices.length; j++){
-                price += (usage[i] + prices[j]);
+                price += (usage[i] + prices[i]);
             }
-        }
-        //fikser seinare//
-
         return price;
-    }
+        }
+
 
     // e) compute power support for a given usage and price
     private static final double THRESHOLD = 0.9375;
@@ -106,7 +103,11 @@ public class DailyPower {
 
         double average = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++){
+            average += usage[i];
+        }
+
+        average = average/usage.length;
 
         return average;
     }
