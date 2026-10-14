@@ -23,9 +23,11 @@ public class MonthMain {
          */
         System.out.println("A) Månedlig strømforbruk");
         MonthlyPower.print_PowerUsage(power_usage_month);
+        System.out.println("");
 
         System.out.println("B) Månedlig strømpriser"); 
-        MonthlyPower.print_PowerPrices(power_prices_month);  
+        MonthlyPower.print_PowerPrices(power_prices_month); 
+        System.out.println(""); 
         
         System.out.println("C) Total månedlig forbruk");
         System.out.printf("%.2f kWh%n", MonthlyPower.computePowerUsage(power_usage_month));
@@ -35,6 +37,16 @@ public class MonthMain {
         System.out.println("D) Forbrukgrense");
         System.out.println(MonthlyPower.exceedThreshold(power_usage_month, threshold));
 
-        System.out.println("E Spotpris for måneden");
+        System.out.println("E) Spotpris for måneden");
+        System.out.printf("%.2f NOK%n", MonthlyPower.computeSpotPrice(power_usage_month, power_prices_month));
+        System.out.println("");
+
+        System.out.println("F) Strømstøtte for månaden");
+        System.out.printf("%.2f NOK%n", MonthlyPower.computePowerSupport(power_usage_month, power_prices_month));
+        System.out.println("");
+
+        System.out.println("G) Norgepris for månaden");
+        System.out.printf("%.2f NOK%n", MonthlyPower.computeNorgesPrice(power_usage_month));
+
     }
 }
