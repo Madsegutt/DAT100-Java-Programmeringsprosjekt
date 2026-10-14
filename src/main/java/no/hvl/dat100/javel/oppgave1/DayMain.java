@@ -59,7 +59,7 @@ public class DayMain {
 
         System.out.println();
 
-        for (int i = 0;i < (DayPowerData.powerusage_day).length; i++){
+        for (int i = 0;i < (DayPowerData.powerusage_day).length; i++) {
             double usage = DayPowerData.powerusage_day[i];
             double price = DayPowerData.powerprices_day[i];
 
