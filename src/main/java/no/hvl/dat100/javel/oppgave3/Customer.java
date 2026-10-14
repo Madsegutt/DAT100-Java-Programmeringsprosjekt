@@ -27,19 +27,28 @@ public class Customer {
     public String getEmail() {
         return this.email;
     }
-    public void setEmail() {
+    public void setEmail(String email) {
         this.email = email;
     }
 
     public int getCustomer_id(){
         return this.customer_id;
     }
-    public void setCustomer_id() {
+    public void setCustomer_id(int customer_Id) {
         this.customer_id = customer_id;
     }
 
     public PowerAgreementType getAgreement() {
         return this.agreement;
     }
-    // TODO - toString method
+    public void setAgreement(PowerAgreementType agreement) {
+        this.agreement = agreement;
+    }
+
+    public String toString() {
+        return "Customer id: " + customer_id + "\n" +
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Agreement: " + agreement;
+    }
 }

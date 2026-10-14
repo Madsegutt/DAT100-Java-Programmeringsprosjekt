@@ -11,13 +11,12 @@ public class CustomerMain {
         System.out.println("==============");
         System.out.println();
 
-        /*
-        TODO
-
-         Write code that creates a Customer object and teste the methods implemented in the class
-
-        */
+        //Alt bra bortsett fra setCustomer_id, får bare 0
         Customer k1 = new Customer();
-
+        k1.setCustomer_id(2);
+        k1.setName("Testernavn");
+        k1.setEmail("email@test.com");
+        k1.setAgreement(PowerAgreementType.SPOTPRICE);
+        System.out.print(k1.toString());
     }
 }
