@@ -95,7 +95,7 @@ public class DailyPower {
         double temp_max = 0;
 
         for (double u : usage) {
-            if (u > temp_max){
+            if (u > temp_max) {
                 temp_max = u;
             }
         }
