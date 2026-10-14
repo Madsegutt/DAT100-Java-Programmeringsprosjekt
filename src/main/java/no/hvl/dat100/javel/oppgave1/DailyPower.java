@@ -65,14 +65,14 @@ public class DailyPower {
     }
 
 
-
     // f) compute power support for a single day
     public static double computePowerSupport(double[] usage, double[] prices) {
 
         double support = 0;
 
-        // TODO
-
+        for (int i = 0; i < usage.length; i++){
+            support += getSupport(usage[i], prices[i]);
+        }
         return support;
     }
 
@@ -83,18 +83,22 @@ public class DailyPower {
 
         double price = 0;
 
-        // TODO
-
+        for (double i : usage) {
+            price += i * NORGESPRIS_KWH;
+        }
         return price;
     }
 
-    // g) compute peak usage during a single day
+    // h) compute peak usage during a single day
     public static double findPeakUsage(double[] usage) {
 
         double temp_max = 0;
 
-        // TODO
-
+        for (double u : usage) {
+            if (u > temp_max){
+                temp_max = u;
+            }
+        }
         return temp_max;
     }
 
