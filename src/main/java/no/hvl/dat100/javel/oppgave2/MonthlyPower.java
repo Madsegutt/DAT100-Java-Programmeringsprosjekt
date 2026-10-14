@@ -30,7 +30,7 @@ public class MonthlyPower {
         double sum = 0;
 
         for (int i = 0; i < usage.length; i++) {
-            sum += 
+            sum +=
         }
 
         return sum;
