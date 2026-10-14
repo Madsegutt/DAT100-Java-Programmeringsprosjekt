@@ -28,10 +28,10 @@ public class MonthlyPower {
     // c) compute total power usage for a month
     public static double computePowerUsage(double[][] usage) {
 
-        double sum = 0;¨
+        double sum = 0;
 
         for (int i = 0; i < usage.length; i++) {
-            sum +=
+            sum += sum;
         }
 
         return sum;
