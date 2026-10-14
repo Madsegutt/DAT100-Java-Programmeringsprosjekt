@@ -1,5 +1,6 @@
 package no.hvl.dat100.javel.oppgave2;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class MonthMain {
     public static void main(String[] args) {
 
@@ -27,10 +28,12 @@ public class MonthMain {
         MonthlyPower.print_PowerPrices(power_prices_month);  
         
         System.out.println("C) Total månedlig forbruk");
-        System.out.println();
+        System.out.printf("%.2f kWh%n", MonthlyPower.computePowerUsage(power_usage_month));
+        System.out.println("");
 
+        double threshold = 5000;
         System.out.println("D) Forbrukgrense");
-        System.out.println();
+        System.out.println(MonthlyPower.exceedThreshold(power_usage_month, threshold));
 
         System.out.println("E Spotpris for måneden");
     }

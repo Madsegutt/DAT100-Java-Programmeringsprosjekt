@@ -1,6 +1,4 @@
 package no.hvl.dat100.javel.oppgave1;
-import static no.hvl.dat100.javel.oppgave1.DailyPower.printPowerPrices;
-import static no.hvl.dat100.javel.oppgave1.DayPowerData.powerusage_day;
 
 public class DailyPower {
 
