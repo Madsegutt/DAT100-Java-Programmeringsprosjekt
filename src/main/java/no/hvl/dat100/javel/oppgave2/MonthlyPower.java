@@ -9,8 +9,9 @@ public class MonthlyPower {
 
         // TODO
        for (int i = 0; i < usage.length; i++) {
-        System.out.println("Day " + (i + 1) + ":");
-        DailyPower.computePowerUsage(usage[i]);
+        System.out.print("Day " + (i + 1) + ":");
+        DailyPower.printPowerUsage(usage[i]);
+        System.out.println("");
         }
     }
 
@@ -18,16 +19,16 @@ public class MonthlyPower {
     public static void print_PowerPrices(double[][] prices) {
 
         for (int i = 0; i < prices.length; i++) {
-            System.out.println("Day " + (i + 1) + ":");
-            DailyPower.computePowerUsage(prices[i]);
+            System.out.print("Day " + (i + 1) + ":");
+            DailyPower.printPowerPrices(prices[i]);
+            System.out.println("");
         }
-
     }
 
     // c) compute total power usage for a month
     public static double computePowerUsage(double[][] usage) {
 
-        double sum = 0;
+        double sum = 0;¨
 
         for (int i = 0; i < usage.length; i++) {
             sum += 

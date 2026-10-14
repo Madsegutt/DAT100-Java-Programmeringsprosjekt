@@ -1,8 +1,4 @@
 package no.hvl.dat100.javel.oppgave2;
-
-import no.hvl.dat100.javel.oppgave1.DayPowerData;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class MonthMain {
     public static void main(String[] args) {
@@ -25,10 +21,10 @@ public class MonthMain {
          Remember to also to check that you get the expected results
          */
         System.out.println("A) Månedlig strømforbruk");
-        System.out.println();
+        MonthlyPower.print_PowerUsage(power_usage_month);
 
         System.out.println("B) Månedlig strømpriser"); 
-        System.out.println();  
+        MonthlyPower.print_PowerPrices(power_prices_month);  
         
         System.out.println("C) Total månedlig forbruk");
         System.out.println();
@@ -37,6 +33,5 @@ public class MonthMain {
         System.out.println();
 
         System.out.println("E Spotpris for måneden");
-        MonthlyPower.print_PowerUsage(power_usage_month);
     }
 }
