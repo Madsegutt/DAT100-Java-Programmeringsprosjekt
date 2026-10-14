@@ -4,7 +4,7 @@ import static no.hvl.dat100.javel.oppgave1.DayPowerData.powerusage_day;
 
 public class DailyPower {
 
-    // a) print power prices during a day
+    // a) print power prices during a days
     public static void printPowerPrices(double[] prices) {
 
         for (double price : prices) {

@@ -23,7 +23,7 @@ public class DayMain {
          Remember to teste the methods as you implement them
          Remember to also to check that you get the expected results
          */
-
+        //
 
         System.out.println("A) Strømpriser");
         DailyPower.printPowerPrices(powerprices_day);
