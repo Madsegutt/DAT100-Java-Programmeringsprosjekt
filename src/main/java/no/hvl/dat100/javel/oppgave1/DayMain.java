@@ -23,7 +23,7 @@ public class DayMain {
          Remember to teste the methods as you implement them
          Remember to also to check that you get the expected results
          */
-
+        //
 
         System.out.println("A) Strømpriser");
         DailyPower.printPowerPrices(powerprices_day);
@@ -34,31 +34,14 @@ public class DayMain {
         System.out.println("");
 
         System.out.println("C) Total Strømforbruk");
+        System.out.println("Summen er: " + DailyPower.computePowerUsage(powerusage_day));
         System.out.println("");
 
         System.out.println("D) Strømpris med spotpris");
+        System.out.println("Spotprisen er: " + DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
         System.out.println("");
 
         System.out.println("E) Strømpris med strømstøtte");
-        System.out.println("");
-
-        System.out.println("F) Strømstøtte for heildagen");
-        System.out.println(DailyPower.computePowerSupport(powerusage_day, powerprices_day));
-        System.out.println("");
-
-        System.out.println("G) Norgespris");
-        System.out.println("");
-
-        System.out.println("H) Størst strlmforbruk");
-        System.out.println("");
-
-        System.out.println("I) Gjennomsnitt strømforbruk");
-        System.out.println("");
-
-        System.out.println(DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
-
-        System.out.println();
-
         for (int i = 0;i < (DayPowerData.powerusage_day).length; i++) {
             double usage = DayPowerData.powerusage_day[i];
             double price = DayPowerData.powerprices_day[i];
@@ -68,6 +51,25 @@ public class DayMain {
                 System.out.println("Straumstøtte: " + support);
             }
         }
+        System.out.println("");
+
+        System.out.println("F) Strømstøtte for heildagen");
+        System.out.println(DailyPower.computePowerSupport(powerusage_day, powerprices_day));
+        System.out.println("");
+
+        System.out.println("G) Norgespris");
+        System.out.println("Norgesprisen er: " + DailyPower.computeNorgesPrice(powerusage_day));
+        System.out.println("");
+
+        System.out.println("H) Størst strømforbruk");
+        System.out.println("Ditt største strømforbruk var: " + DailyPower.findPeakUsage(powerusage_day));
+        System.out.println("");
+
+        System.out.println("I) Gjennomsnitt strømforbruk");
+        System.out.println("Ditt gjennomsnittlige forbrukt per timne er: " + DailyPower.findAvgPower(powerusage_day));
+
+        System.out.println();
+
 
     }
 }
