@@ -24,7 +24,19 @@ public class MonthMain {
          Remember to teste the methods as you implement them
          Remember to also to check that you get the expected results
          */
+        System.out.println("A) Månedlig strømforbruk");
+        System.out.println();
 
+        System.out.println("B) Månedlig strømpriser"); 
+        System.out.println();  
+        
+        System.out.println("C) Total månedlig forbruk");
+        System.out.println();
+
+        System.out.println("D) Forbrukgrense");
+        System.out.println();
+
+        System.out.println("E Spotpris for måneden");
         MonthlyPower.print_PowerUsage(power_usage_month);
     }
 }
