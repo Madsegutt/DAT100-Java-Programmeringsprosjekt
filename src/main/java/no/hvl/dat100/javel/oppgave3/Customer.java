@@ -7,7 +7,7 @@ public class Customer {
     private int customer_id;
     private PowerAgreementType agreement;
 
-    public Customer(String name, String email, int customer_id, PowerAgreementType agreement) {
+    public Customer() {
 
         this.name = name;
         this.email = email;
@@ -15,7 +15,6 @@ public class Customer {
         this.agreement = agreement;
     }
 
-    // TODO - getter/setter methods for all objectvariables
     public String getName() {
         return this.name;
     }
