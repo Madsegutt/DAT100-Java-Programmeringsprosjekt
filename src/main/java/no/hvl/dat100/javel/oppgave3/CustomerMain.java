@@ -1,7 +1,5 @@
 package no.hvl.dat100.javel.oppgave3;
 
-import no.hvl.dat100.javel.oppgave4.Customers;
-
 public class CustomerMain {
 
     public static void main(String[] args) {
@@ -12,11 +10,12 @@ public class CustomerMain {
         System.out.println();
 
         //Alt bra bortsett fra setCustomer_id, får bare 0
-        Customer k1 = new Customer();
-        k1.setCustomer_id(2);
-        k1.setName("Testernavn");
-        k1.setEmail("email@test.com");
+        Customer k1 = new Customer("Testernavn", "email@test.com", 2, PowerAgreementType.SPOTPRICE);
+        System.out.println(k1.toString());
+        k1.setCustomer_id(1001);
+        k1.setName("Alice Smith");
+        k1.setEmail("alice@example.com");
         k1.setAgreement(PowerAgreementType.SPOTPRICE);
-        System.out.print(k1.toString());
+        System.out.println(k1.toString());
     }
 }
