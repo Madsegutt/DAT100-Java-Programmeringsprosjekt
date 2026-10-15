@@ -6,7 +6,7 @@ import no.hvl.dat100.javel.oppgave3.PowerAgreementType;
 public class CustomersMain {
 
     private static Customer lagKunde(int id, String navn, String epost, PowerAgreementType avtale) {
-        Customer k = new Customer();
+        Customer k = new Customer(navn, epost, id, avtale);
         k.setCustomer_id(id);
         k.setName(navn);
         k.setEmail(epost);

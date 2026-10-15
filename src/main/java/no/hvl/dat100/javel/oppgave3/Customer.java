@@ -7,7 +7,7 @@ public class Customer {
     private int customer_id;
     private PowerAgreementType agreement;
 
-    public Customer() {
+    public Customer(String name, String email, int customer_id, PowerAgreementType agreement) {
 
         this.name = name;
         this.email = email;
