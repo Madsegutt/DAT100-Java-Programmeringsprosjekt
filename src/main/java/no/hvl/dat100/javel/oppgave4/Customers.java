@@ -37,10 +37,9 @@ public class Customers {
 
         int i = 0;
         while (i < customers.length && !funnet) {
-            c = this.customers[i];
 
-            int getCustomer_id = 0;
-            if (getCustomer_id == customer_id) {
+            if (customers[i] != null && customers[i].getCustomer_id() == customer_id) {
+                c = customers[i];
                 funnet = true;
             }
             i++;
@@ -73,18 +72,45 @@ public class Customers {
         boolean deleted = false;
         Customer c = null;
 
-        // TODO
+        int i = 0;
+        while (i < customers.length && !deleted) {
 
+            if (customers[i] != null) {
+
+                if (customers[i].getCustomer_id() == customer_id) {
+                    c = customers[i];
+                    customers[i] = null;
+                    deleted = true;
+                }
+            }
+            i++;
+        }
         return c;
     }
 
     // f) return reference table with all customers
     public Customer[] getCustomers() {
 
-        Customer[] customers = null;
+        Customer[] nyTabell = null;
+        int teller = 0;
 
         // TODO
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] != null) {
+                teller++;
+            }
+        }
 
-        return customers;
+        nyTabell = new Customer[teller];
+
+        int j = 0;
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] != null) {
+                nyTabell[j] = customers[i];
+                j++;
+            }
+        }
+
+        return nyTabell;
     }
 }
