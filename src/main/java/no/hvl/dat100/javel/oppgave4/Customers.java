@@ -25,7 +25,6 @@ public class Customers {
             }
 
         }
-        // TODO
 
         return count;
     }
@@ -46,7 +45,6 @@ public class Customers {
             }
             i++;
         }
-        // TODO
 
         return c;
     }
@@ -56,7 +54,15 @@ public class Customers {
 
         boolean inserted = false;
 
-        // TODO
+        int i = 0;
+        while (i < customers.length && !inserted) {
+
+            if (customers[i] == null) {
+                customers[i] = c;
+                inserted = true;
+            }
+            i++;
+        }
 
         return inserted;
     }
