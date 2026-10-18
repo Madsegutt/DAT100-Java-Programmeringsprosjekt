@@ -40,6 +40,7 @@ public class Invoice {
 
     public void printInvoice() {
 
+        System.out.println("==============");
         System.out.println("Customer number: " + c.getCustomer_id());
         System.out.println("Name: " + c.getName());
         System.out.println("Email: " + c.getEmail());
@@ -47,6 +48,8 @@ public class Invoice {
         System.out.println("Month: " + month);
         System.out.println("Usage: " + MonthlyPower.computePowerUsage(usage));
         System.out.println("Amount: " + amount);
+        System.out.println("==============");
+        System.out.println();
         
     }
 }

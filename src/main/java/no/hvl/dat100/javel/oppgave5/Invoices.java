@@ -4,7 +4,12 @@ public class Invoices {
 
     public static void processInvoices(Invoice[] invoices) {
 
-        // TODO
+        for(Invoice faktura: invoices){
+            if (faktura != null) {
+                faktura.computeAmount();
+                faktura.printInvoice();
+            }
+        }
 
     }
 }
