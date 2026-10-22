@@ -36,7 +36,7 @@ public class DailyPower {
 
         double price = 0;
         for (int i = 0; i < usage.length; i++){
-                price += (usage[i] + prices[i]);
+                price += (usage[i] * prices[i]);
             }
         return price;
         }
